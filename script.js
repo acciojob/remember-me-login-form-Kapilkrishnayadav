@@ -32,6 +32,7 @@ submit.addEventListener( "click",(event)=>{
 		localStorage.setItem("username",`${name}`);
 		localStorage.setItem("password",`${password.value}`);
         existing.style.display="inline-block"
+		alert(`Logged in as ${name}`);
         alert("credentials are stored in localStorage");
 		
 	}
@@ -39,10 +40,10 @@ submit.addEventListener( "click",(event)=>{
 	{
 		localStorage.clear();
         existing.style.display="none"
+	alert(`Logged in as ${name}`);
         alert("Credentials are not stored");
 	}
     
-	alert(`Logged in as ${name}`);
     username.value="";
     password.value="";
 })
